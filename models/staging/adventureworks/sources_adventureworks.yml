@@ -1,0 +1,59 @@
+version: 2
+sources:
+  - name: sap_aworks
+    database: fea_academy
+    schema: adventure_works
+    tables:
+      - name: sales_salesorderheader
+        description: tabela de ordens de pedidos do ERP do adventure works
+        columns:
+          - name: salesorderid
+            description: Coluna de chave primaria da tabela Ordens de pedidos
+            tests:
+              - unique
+              - not_null
+          - name: customerid
+            description: Chave extrangeira de cliente da ordem de pedidos
+            tests:
+              - not_null
+      - name: sales_salesorderdetail
+        description: tabela de itens de pedidos do adventure works
+        columns:
+          - name: salesorderid
+            description: Coluna com a chave extrageira do codigo do pedido de venda 
+            tests: 
+              - not_null
+          - name: salesorderdetailid
+            description: coluna com a chave primaria do item do pedido de venda
+            tests:
+              - unique 
+              - not_null
+      - name: person_address
+        description: Endereço do cliente
+        columns:
+          - name: adressid
+            description: chave primaria do codigo do endereço do cliente
+            tests:
+              - unique 
+              - not_null 
+          - name: stateorivinceid
+            description: coluna contendo a chave secundaria da provincia/estado do cliente
+            tests:
+              - not_null    
+      - name: person_stateprovince
+        description: cadastro de provincias/estados do cliente 
+        columns:
+          - name: stateprovinceid
+            description: coluna de chave primaria contendo o codigo do estado
+            tests:
+              - unique 
+              - not_null
+          - name: countryregioncode
+            description: coluna com a chave extrageira com o codigo do pais do cliente
+            tests:
+              - not_null   
+      - name: person_countryregion
+        description: cadastro de paises dos clientes
+        tests:
+          - not_null 
+          
