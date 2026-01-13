@@ -36,7 +36,7 @@ sources:
             tests:
               - unique 
               - not_null 
-          - name: stateorivinceid
+          - name: stateprovinceid
             description: coluna contendo a chave secundaria da provincia/estado do cliente
             tests:
               - not_null    
