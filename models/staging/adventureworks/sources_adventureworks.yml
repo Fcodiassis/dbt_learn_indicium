@@ -41,7 +41,7 @@ sources:
             tests:
               - not_null    
       - name: person_stateprovince
-        description: cadastro de provincias/estados do cliente de vendas
+        description: cadastro de provincias/estados do cliente de vendas 
         columns:
           - name: stateprovinceid
             description: coluna de chave primaria contendo o codigo do estado
