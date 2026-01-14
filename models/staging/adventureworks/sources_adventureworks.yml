@@ -55,8 +55,8 @@ sources:
       - name: person_countryregion
         description: cadastro de paises dos clientes
         columns:
-          - name: countryregioncode
-            description: codigo do   
+          - name: countryregioncode 
+            description: Coluna com o codigo do país            
             tests:
               - not_null 
               - unique
@@ -75,8 +75,31 @@ sources:
         description: Tabela com todas as razoes de venda  
         columns:
           - name: salesreasonid
-            description: cluna com o codigo das razoes de venda
+            description: coluna com o codigo das razoes de venda
             tests:
               - not_null
               - unique     
-      
+      - name: sales_creditcard
+        description: tipode de cartao de credito dos clientes
+        columns:
+          - name: creditcardid
+            description: coluna com o codigo do tipo deo cartao de credito
+            tests:
+              - unique
+              - not_null
+      - name: person_person
+        description: Cadastro de Clientes - person
+        columns:
+          - name: businessentityid
+            description: Codigo do CLiente/Person
+            tests:
+              - not_null
+              - unique
+      - name: production_product
+        description: Cadastro de produtos
+        columns:
+          - name: productid
+            description: Coluna com a chave primaria do Codigo do produto
+            tests:
+              - not_null
+              - unique
