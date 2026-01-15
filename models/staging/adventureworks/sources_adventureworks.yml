@@ -20,13 +20,13 @@ sources:
         description: tabela de itens de pedidos do adventure works
         columns:
           - name: salesorderid
-            description: Coluna com a chave extrageira do codigo do pedido de venda 
-            tests: 
+            description: Coluna com a chave extrageira do codigo do pedido de venda
+            tests:
               - not_null
           - name: salesorderdetailid
             description: coluna com a chave primaria do item do pedido de venda
             tests:
-              - unique 
+              - unique
               - not_null
       - name: person_address
         description: Endereço do cliente
@@ -34,31 +34,31 @@ sources:
           - name: adressid
             description: chave primaria do codigo do endereço do cliente
             tests:
-              - unique 
-              - not_null 
+              - unique
+              - not_null
           - name: stateprovinceid
             description: coluna contendo a chave secundaria da provincia/estado do cliente
             tests:
-              - not_null    
+              - not_null
       - name: person_stateprovince
-        description: cadastro de provincias/estados do cliente de vendas 
+        description: cadastro de provincias/estados do cliente de vendas
         columns:
           - name: stateprovinceid
             description: coluna de chave primaria contendo o codigo do estado
             tests:
-              - unique 
+              - unique
               - not_null
           - name: countryregioncode
             description: coluna com a chave extrageira com o codigo do pais do cliente
             tests:
-              - not_null   
+              - not_null
       - name: person_countryregion
         description: cadastro de paises dos clientes
         columns:
-          - name: countryregioncode 
-            description: Coluna com o codigo do país            
+          - name: countryregioncode
+            description: Coluna com o codigo do país
             tests:
-              - not_null 
+              - not_null
               - unique
       - name: sales_salesorderheadersalesreason
         description: tabela com o relacionamento da codificação das razoes de venda com o pedido de venda
@@ -72,13 +72,13 @@ sources:
             tests:
               - not_null
       - name: sales_salesreason
-        description: Tabela com todas as razoes de venda  
+        description: Tabela com todas as razoes de venda
         columns:
           - name: salesreasonid
             description: coluna com o codigo das razoes de venda
             tests:
               - not_null
-              - unique     
+              - unique
       - name: sales_creditcard
         description: tipode de cartao de credito dos clientes
         columns:
