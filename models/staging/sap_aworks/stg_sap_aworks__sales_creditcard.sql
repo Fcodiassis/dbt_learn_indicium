@@ -11,10 +11,10 @@ renamed as (
     select
         creditcardid,
         cardtype,
-        cardnumber,
-        expmonth,
-        expyear,
-        modifieddate
+        cardnumber
+        --,expmonth,
+        --expyear,
+        --modifieddate
 
     from source
 
