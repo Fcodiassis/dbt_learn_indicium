@@ -30,10 +30,10 @@ renamed as (
         subtotal as vlr_subtotal,
         taxamt as vlt_tota_imposto,
         freight as vlr_total_frete,
-        totaldue as vlr_total,
-        --comment,
+        totaldue as vlr_total
+        --,comment,
         --rowguid,
-        modifieddate
+        --modifieddate
 
     from source
 
