@@ -36,7 +36,7 @@ with
             inter_pedidos.vlr_total,
 
             inter_pedidos_items.item_unico_pk,
-            inter_pedidos_items.pedido_id,
+            --inter_pedidos_items.pedido_id,
             inter_pedidos_items.item_id,
             inter_pedidos_items.productid,
             inter_pedidos_items.quantidade,
