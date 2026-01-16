@@ -17,11 +17,11 @@ renamed as (
         middlename,
         lastname,
         suffix,
-        emailpromotion,
-        additionalcontactinfo,
-        demographics,
-        rowguid,
-        modifieddate
+        emailpromotion
+        --,additionalcontactinfo
+        --,demographics,
+        --rowguid,
+        --modifieddate
 
     from source
 

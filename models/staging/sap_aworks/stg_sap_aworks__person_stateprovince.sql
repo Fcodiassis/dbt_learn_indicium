@@ -13,10 +13,10 @@ renamed as (
         stateprovincecode,
         countryregioncode,
         isonlystateprovinceflag,
-        name,
-        territoryid,
-        rowguid,
-        modifieddate
+        name
+        --,territoryid,
+        --rowguid,
+        --modifieddate
 
     from source
 
