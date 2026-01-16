@@ -23,17 +23,19 @@ with
         select
             enderecos.addressid
             ,enderecos.addressline1 as endereco
-            ,enderecos.city as name_city
-            ,estados.stateprovincecode
-            ,estados.name as name_province
-            ,paises.countryregioncode
-            ,paises.name as name_country
+            ,enderecos.city as dsc_cidade
 
-        from enderecos a
-        inner join estados b
-        on a.stateprovinceid=b.stateprovinceid
-        inner join paises c
-        on b.countryregioncode=c.countryregioncode
+            ,estados.stateprovincecode
+            ,estados.dsc_estado
+
+            ,paises.countryregioncode
+            ,paises.dsc_pais
+
+        from enderecos
+        inner join estados
+            on enderecos.stateprovinceid=estados.stateprovinceid
+        inner join paises
+            on estados.countryregioncode=paises.countryregioncode
     )
 
 select * from joined

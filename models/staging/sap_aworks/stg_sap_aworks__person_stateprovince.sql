@@ -13,7 +13,7 @@ renamed as (
         stateprovincecode,
         countryregioncode,
         isonlystateprovinceflag,
-        name
+        name as dsc_estado
         --,territoryid,
         --rowguid,
         --modifieddate
