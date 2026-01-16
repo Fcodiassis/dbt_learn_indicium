@@ -19,13 +19,14 @@ with
         select
             razoes_pedidos.salesorderid
             , razoes_pedidos.salesreasonid
-            , razoes_pedidos.modifieddate
-            , razoes.name
+            --, razoes_pedidos.modifieddate
+
+            , razoes.dsc_razao
             , razoes.reasontype
 
         from razoes_pedidos
         inner join razoes 
-        on razoes_pedidos.salesorderid = razoes.salesorderid
+        on razoes_pedidos.salesreasonid = razoes.salesreasonid
 
     )
 

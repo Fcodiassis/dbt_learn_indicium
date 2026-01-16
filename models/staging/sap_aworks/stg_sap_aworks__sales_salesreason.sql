@@ -10,9 +10,9 @@ renamed as (
 
     select
         salesreasonid,
-        name,
-        reasontype,
-        modifieddate
+        name as dsc_razao,
+        reasontype
+        --,modifieddate
 
     from source
 

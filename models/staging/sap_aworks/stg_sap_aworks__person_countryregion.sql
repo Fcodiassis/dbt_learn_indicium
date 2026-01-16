@@ -10,8 +10,8 @@ renamed as (
 
     select
         countryregioncode,
-        name,
-        modifieddate
+        name as dsc_pais
+        --,modifieddate
 
     from source
 

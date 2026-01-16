@@ -10,8 +10,8 @@ renamed as (
 
     select
         salesorderid,
-        salesreasonid,
-        modifieddate
+        salesreasonid
+        --,modifieddate
 
     from source
 
