@@ -14,7 +14,7 @@ renamed as (
         productnumber,
         makeflag,
         finishedgoodsflag,
-        color,
+        --color,
         safetystocklevel,
         reorderpoint,
         standardcost,
@@ -31,9 +31,9 @@ renamed as (
         productmodelid,
         sellstartdate,
         sellenddate,
-        discontinueddate,
-        rowguid,
-        modifieddate
+        discontinueddate
+        --,rowguid,
+        --modifieddate
 
     from source
 

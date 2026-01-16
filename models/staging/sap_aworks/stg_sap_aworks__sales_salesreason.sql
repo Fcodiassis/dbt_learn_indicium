@@ -11,8 +11,8 @@ renamed as (
     select
         salesreasonid,
         name,
-        reasontype,
-        modifieddate
+        reasontype
+        --,modifieddate
 
     from source
 
