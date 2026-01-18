@@ -28,7 +28,7 @@ renamed as (
         --creditcardapprovalcode,
         currencyrateid,
         subtotal as vlr_subtotal,
-        taxamt as vlt_tota_imposto,
+        taxamt as vlr_total_imposto,
         freight as vlr_total_frete,
         totaldue as vlr_total
         --,comment,
