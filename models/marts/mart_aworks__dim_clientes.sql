@@ -1,6 +1,6 @@
 with 
 
-source as (
+cliente as (
 
     select * from {{ ref('stg_sap_aworks__person_person') }}
 
@@ -9,21 +9,14 @@ source as (
 renamed as (
 
     select
-        businessentityid,
+        businessentityid as customerid,
         persontype,
-        namestyle,
+        --namestyle,
         title,
-        firstname,
-        middlename,
-        lastname,
-        suffix,
+        concat(ifnull(firstname,''),' ',ifnull(middlename,''),' ',ifnull(lastname,''),' ',ifnull(suffix,'')) as nome_completo,
         emailpromotion
-        --,additionalcontactinfo
-        --,demographics,
-        --rowguid,
-        --modifieddate
 
-    from source
+    from cliente
 
 )
 

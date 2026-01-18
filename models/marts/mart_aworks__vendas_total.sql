@@ -15,6 +15,8 @@ with
     , metrics as (
         select
             int_sales.item_unico_pk
+            , year(int_sales.data_pedido) as Ano
+            , month(int_sales.data_pedido) as Mes 
             , int_sales.pedido_id
             , int_sales.item_id
             , int_sales.data_pedido
