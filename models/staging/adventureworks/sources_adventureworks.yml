@@ -58,8 +58,8 @@ sources:
           - name: countryregioncode
             description: Coluna com o codigo do país
             tests:
-              - not_null
               - unique
+              - not_null
       - name: sales_salesorderheadersalesreason
         description: tabela com o relacionamento da codificação das razoes de venda com o pedido de venda
         columns:

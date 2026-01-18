@@ -31,7 +31,7 @@ with
             inter_pedidos.creditcardid,
             inter_pedidos.currencyrateid,
             inter_pedidos.vlr_subtotal,
-            inter_pedidos.vlt_tota_imposto,
+            inter_pedidos.vlr_total_imposto,
             inter_pedidos.vlr_total_frete,
             inter_pedidos.vlr_total,
 
