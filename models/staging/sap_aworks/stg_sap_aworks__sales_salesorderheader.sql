@@ -11,9 +11,9 @@ renamed as (
     select
         salesorderid as pedido_id,
         --revisionnumber,
-        orderdate as data_pedido,
+        cast(orderdate as date) as data_pedido,
         --duedate,
-        shipdate as data_envio,
+        cast(shipdate as date) as data_envio,
         status,
         --onlineorderflag,
         --purchaseordernumber,
