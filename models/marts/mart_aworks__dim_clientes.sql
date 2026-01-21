@@ -6,18 +6,26 @@ cliente as (
 
 ),
 
+cliente_person as (
+
+    select * from {{ ref('stg_sap_aworks__sales_customer') }}
+
+),
+
 renamed as (
 
     select
-        businessentityid as customerid,
-        persontype,
+        cliente_person.customerid
+        cliente.businessentityid as personid,
+        cliente.persontype,
         --namestyle,
-        title,
-        concat(ifnull(firstname,''),' ',ifnull(middlename,''),' ',ifnull(lastname,''),' ',ifnull(suffix,'')) as nome_completo,
-        emailpromotion
+        cliente.title,
+        concat(ifnull(cliente.firstname,''),' ',ifnull(cliente.middlename,''),' ',ifnull(cliente.lastname,''),' ',ifnull(cliente.suffix,'')) as nome_completo,
+        cliente.emailpromotion
 
     from cliente
-
+    inner join cliente_person
+    on cliente.businessentityid = cliente_person.personid 
 )
 
 select * from renamed
