@@ -15,7 +15,7 @@ cliente_person as (
 renamed as (
 
     select
-        cliente_person.customerid
+        cliente_person.customerid,
         cliente.businessentityid as personid,
         cliente.persontype,
         --namestyle,
