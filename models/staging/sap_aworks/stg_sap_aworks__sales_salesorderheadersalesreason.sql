@@ -14,6 +14,7 @@ renamed as (
         --,modifieddate
 
     from source
+    group by salesorderid
 
 )
 
