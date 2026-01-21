@@ -10,10 +10,11 @@ renamed as (
 
     select
         salesorderid,
-        salesreasonid
+        max(salesreasonid) as salesreasonid
         --,modifieddate
 
     from source
+    group by salesorderid
 
 )
 
