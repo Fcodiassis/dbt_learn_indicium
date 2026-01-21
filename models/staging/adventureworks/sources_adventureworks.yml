@@ -103,3 +103,14 @@ sources:
             tests:
               - not_null
               - unique
+      - name: sales_customer
+        description: Tabela de integração entre o cliente e a pessoa do pedido de venda        
+        columns:
+          - name: customerid
+            description: Chave do Cliente vinculado ao Pedido de Venda
+            tests:
+              - not_null
+          - name: personid
+            description: Chave da pessoa representativa do CLiente ao Pedido de Venda
+            tests:
+              - not_null
