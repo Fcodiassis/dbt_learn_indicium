@@ -26,7 +26,8 @@ with
 
     , metrics as (
         select
-            int_curva.data_pedido
+            int_curva.pedido_id
+            , int_curva.data_pedido
             , int_localidade.dsc_cidade
             , int_localidade.dsc_estado
             , int_localidade.dsc_pais
@@ -51,7 +52,8 @@ with
 --        on int_curva.customerid = int_cliente.customerid
 
         group by
-            int_curva.data_pedido
+            int_curva.pedido_id
+            , int_curva.data_pedido
             , int_localidade.dsc_cidade
             , int_localidade.dsc_estado
             , int_localidade.dsc_pais
