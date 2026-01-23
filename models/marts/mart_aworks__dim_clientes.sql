@@ -17,11 +17,11 @@ renamed as (
     select
         cliente_person.customerid,
         cliente.businessentityid as personid,
-        cliente.persontype,
+        --cliente.persontype,
         --namestyle,
-        cliente.title,
-        concat(ifnull(cliente.firstname,''),' ',ifnull(cliente.middlename,''),' ',ifnull(cliente.lastname,''),' ',ifnull(cliente.suffix,'')) as nome_completo,
-        cliente.emailpromotion
+        --cliente.title,
+        concat(ifnull(cliente.firstname,''),' ',ifnull(cliente.middlename,''),' ',ifnull(cliente.lastname,''),' ',ifnull(cliente.suffix,'')) as nome_completo
+        --,cliente.emailpromotion
 
     from cliente
     inner join cliente_person
