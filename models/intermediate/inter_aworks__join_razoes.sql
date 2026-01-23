@@ -20,7 +20,6 @@ with
             razoes_pedidos.salesorderid
             , razoes_pedidos.salesreasonid
             --, razoes_pedidos.modifieddate
-
             , razoes.dsc_razao
             , razoes.reasontype
 

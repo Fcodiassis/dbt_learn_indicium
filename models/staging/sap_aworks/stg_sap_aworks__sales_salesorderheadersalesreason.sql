@@ -10,7 +10,7 @@ renamed as (
 
     select
         salesorderid,
-        max(salesreasonid) as salesreasonid
+        salesreasonid
         --,modifieddate
 
     from source
