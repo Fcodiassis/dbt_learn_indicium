@@ -34,9 +34,8 @@ with
             , int_curva.productid
             , int_produto.dsc_produto
             , int_curva.customerid
-            , int_curva.creditcardid
+            --, int_curva.creditcardid
             , int_curva.cardtype
-
             --, count(distinct int_curva.pedido_id) numero_de_pedidos
             , sum(int_curva.quantidade) as quantidade
             , sum(int_curva.vlr_unitario * int_curva.quantidade) as faturamento_bruto

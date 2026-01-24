@@ -52,11 +52,7 @@ with
             , int_localidade.dsc_pais
             , int_ticket.productid
             , int_produto.dsc_produto
-
-        --QUALIFY ROW_NUMBER() over (
-        --partition by Ano, Mes, dsc_cidade, dsc_estado, dsc_pais
-        --order by ticket_medio DESC
-        --) = 2            
+           
     )
 select *
 from metrics
