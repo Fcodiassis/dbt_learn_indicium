@@ -1,0 +1,88 @@
+models:
+  - name: mart_aworks__vendas_total
+    description: Tabela fato com todas vendas dispostos na última granularidade de produto e cliente por Ano, Mes, Pais, Estado, Cidade, Tipo Cartão de Credito.
+    columns:
+      - name: item_unico_pk
+        description: Código único do item da venda (Código do Pedido + Item do Pedido)
+        tests:
+          - not_null
+      - name: Ano
+        description: Ano referente a venda
+        tests:
+          - not_null
+      - name: Mes 
+        description: Mes referente a venda
+        tests:
+          - not_null
+      - name: pedido_id
+        description: Código do pedido de venda
+        tests:
+          - not_null
+      - name: item_id
+        description: Código do item de venda
+        tests:
+          - not_null
+      - name: data_pedido
+        description: Data da Venda
+        tests:
+          - not_null
+      - name: status
+        description: Status da venda (Sem descrição relevante)
+        tests:
+          - not_null
+      - name: customerid
+        description: Código do Cliente
+        tests:
+          - not_null
+      - name: id_ender_cobranca
+        description: Código do endereço de cobrança
+        tests:
+          - not_null
+      - name: cardtype
+        description: Tipo de Cartão de Credito efetuado no ato da venda
+        tests:
+          - not_null
+      - name: productid
+        description: Código do produto
+        tests:
+          - not_null
+      - name: vlr_unitario
+        description: Valor unitario do produto
+        tests:
+          - not_null
+      - name: quantidade
+        description: Quantidade negociada
+        tests:
+          - not_null
+      - name: vlr_desconto
+        description: Valor do desconto
+        tests:
+          - not_null
+      - name: vlr_total_item
+        description: Valor do item negociado sem desconto
+        tests:
+          - not_null
+      - name: vlr_total_com_desconto
+        description: Valor do item negociado com desconto
+        tests:
+          - not_null
+      - name: frete_alocado
+        description: Valor do frete
+        tests:
+          - not_null
+      - name: tem_desconto
+        description: Flag informativo se o item tem desconto ou não (verdadeiro ou falso)
+        tests:
+          - not_null
+      - name: dsc_cidade
+        description: Descrição da Cidade
+        tests:
+          - not_null
+      - name: dsc_estado
+        description: Descrição do Estado
+        tests:
+          - not_null
+      - name: dsc_pais
+        description: Descrição do Pais
+        tests:
+          - not_null
