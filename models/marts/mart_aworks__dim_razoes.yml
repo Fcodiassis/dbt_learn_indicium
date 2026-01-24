@@ -1,0 +1,18 @@
+models:
+  - name: mart_aworks__dim_razoes
+    description: Dimensão de Motivos de Venda
+    columns:
+      - name: pedido_id
+        description: Codigo do Pedido de Venda o qual o motivo da venda foi registrado
+        tests:
+          - not_null
+      - name: dsc_razao
+        description: Descrição do Motivo de Venda
+        tests:
+          - not_null
+      - name: reasontype
+        description: Grupo a que pertence o motivo de venda (Tipo de Motivo de Venda)
+        tests:
+          - not_null
+      - name: safetystocklevel
+        description: Quantidade do estoque minimo do produto

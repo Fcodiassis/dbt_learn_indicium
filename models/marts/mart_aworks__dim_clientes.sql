@@ -6,7 +6,7 @@ cliente as (
 
 ),
 
-cliente_person as (
+cliente_venda as (
 
     select * from {{ ref('stg_sap_aworks__sales_customer') }}
 
@@ -15,7 +15,7 @@ cliente_person as (
 renamed as (
 
     select
-        cliente_person.customerid,
+        cliente_venda.customerid,
         cliente.businessentityid as personid,
         --cliente.persontype,
         --namestyle,
@@ -24,8 +24,8 @@ renamed as (
         --,cliente.emailpromotion
 
     from cliente
-    inner join cliente_person
-    on cliente.businessentityid = cliente_person.personid 
+    inner join cliente_venda
+    on cliente.businessentityid = cliente_venda.personid 
 )
 
 select * from renamed

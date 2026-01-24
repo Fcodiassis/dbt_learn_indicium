@@ -1,0 +1,18 @@
+models:
+  - name: mart_aworks__dim_produtoss
+    description: Dimensão de Produtos
+    columns:
+      - name: productid
+        description: Codigo do Produto
+        tests:
+          - not_null
+          - unique
+      - name: productnumber
+        description: Referencia de fabrica do produto
+        tests:
+          - not_null
+          - unique
+      - name: dsc_produto
+        description: Descrição detalhada do Produto
+        tests:
+          - not_null
