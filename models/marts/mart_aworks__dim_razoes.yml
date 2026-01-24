@@ -14,5 +14,3 @@ models:
         description: Grupo a que pertence o motivo de venda (Tipo de Motivo de Venda)
         tests:
           - not_null
-      - name: safetystocklevel
-        description: Quantidade do estoque minimo do produto

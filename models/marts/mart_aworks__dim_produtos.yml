@@ -1,5 +1,5 @@
 models:
-  - name: mart_aworks__dim_produtoss
+  - name: mart_aworks__dim_produtos
     description: Dimensão de Produtos
     columns:
       - name: productid
@@ -16,3 +16,5 @@ models:
         description: Descrição detalhada do Produto
         tests:
           - not_null
+      - name: safetystocklevel
+        description: Quantidade do estoque minimo do produto
