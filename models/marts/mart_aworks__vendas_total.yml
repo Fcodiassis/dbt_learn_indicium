@@ -1,6 +1,6 @@
 models:
   - name: mart_aworks__vendas_total
-    description: Tabela fato com todas vendas dispostos na última granularidade de produto e cliente por Ano, Mes, Pais, Estado, Cidade, Tipo Carta.
+    description: Tabela fato com todas vendas dispostos na última granularidade de produto e cliente por Ano, Mes, Pais, Estado, Cidade, Tipo Cartão de Credito.
     columns:
       - name: item_unico_pk
         description: Código único do item da venda (Código do Pedido + Item do Pedido)
@@ -39,7 +39,7 @@ models:
         tests:
           - not_null
       - name: cardtype
-        description: Tipo de Carta de Credito efetuado no ato da venda
+        description: Tipo de Cartão de Credito efetuado no ato da venda
         tests:
           - not_null
       - name: productid
