@@ -34,7 +34,6 @@ with
             , int_curva.productid
             , int_produto.dsc_produto
             , int_curva.customerid
---            , int_cliente.nome_completo
             , int_curva.creditcardid
             , int_curva.cardtype
 
@@ -48,8 +47,6 @@ with
         on int_curva.id_ender_cobranca = int_localidade.addressid
         inner join int_produto
         on int_curva.productid = int_produto.productid
---        inner join int_cliente
---        on int_curva.customerid = int_cliente.customerid
 
         group by
             int_curva.pedido_id
@@ -60,7 +57,6 @@ with
             , int_curva.productid
             , int_produto.dsc_produto
             , int_curva.customerid
---            , int_cliente.nome_completo
             , int_curva.creditcardid
             , int_curva.cardtype
 

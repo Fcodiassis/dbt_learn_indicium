@@ -1,0 +1,18 @@
+models:
+  - name: mart_aworks__dim_clientes
+    description: Dimensão de Clientes
+    columns:
+      - name: customerid
+        description: Codigo do Cliente
+        tests:
+          - not_null
+          - unique
+      - name: personid
+        description: Codigo da Pessoa que representa o Cliente
+        tests:
+          - not_null
+          - unique
+      - name: nome_completo
+        description: Nome Completo do Cliente contanto o Firs, middle e o last name.
+        tests:
+          - not_null

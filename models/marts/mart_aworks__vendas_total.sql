@@ -23,7 +23,7 @@ with
             , int_sales.status
             , int_sales.customerid
             , int_sales.id_ender_cobranca
-            , int_sales.creditcardid
+--, int_sales.creditcardid
             , int_sales.cardtype
             , int_sales.productid
             , int_sales.vlr_unitario
