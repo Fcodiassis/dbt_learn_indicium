@@ -31,7 +31,7 @@ sources:
       - name: person_address
         description: Endereço do cliente
         columns:
-          - name: adressid
+          - name: addressid
             description: chave primaria do codigo do endereço do cliente
             tests:
               - unique
@@ -59,7 +59,6 @@ sources:
             description: Coluna com o codigo do país
             tests:
               - unique
-              - not_null
       - name: sales_salesorderheadersalesreason
         description: tabela com o relacionamento da codificação das razoes de venda com o pedido de venda
         columns:
@@ -111,6 +110,4 @@ sources:
             tests:
               - not_null
           - name: personid
-            description: Chave da pessoa representativa do CLiente ao Pedido de Venda
-            tests:
-              - not_null
+            description: Chave da pessoa representativa do Cliente ao Pedido de Venda

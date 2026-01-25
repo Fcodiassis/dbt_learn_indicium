@@ -17,7 +17,7 @@ renamed as (
         --modifieddate
 
     from source
-
+ 
 )
 
 select * from renamed
